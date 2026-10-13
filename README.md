@@ -1,12 +1,13 @@
 # TakeMeter — Fine-Tuned Running Discourse Classifier
+---
+TakeMeter is a fine-tuned text classifier that evaluates discourse quality in the online running community. I defined the labels, collected and annotated the data, fine-tuned a model to honestly assess where the classifier works and where it falls apart. 
 
+## Data Collection
 
-# Data Collection
-
-## Source
+### Source
 Posts were collected manually from [r/running](https://www.reddit.com/r/running) using the subreddit's **Top (This Month)** filter. Automated scraping was attempted using both Reddit's JSON endpoint and the Arctic Shift archive API, but both returned predominantly AutoModerator megathreads and `[removed]` posts with no body text. Manual collection was used instead, browsing the subreddit directly and copy-pasting substantive posts into a CSV.
 
-## Labeling Process
+### Labeling Process
 Posts were labeled at collection time — each post was read and assigned a label as it was added to the dataset. No automated pre-labeling pipeline was used due to the scraper limitations. Every label reflects a direct human judgment made against the label definitions and tiebreaker rules documented in `planning.md`.
 
 Posts were excluded if they had no body text (link posts, image posts), were AutoModerator threads, or contained only `[removed]` or `[deleted]` content. Only posts with enough text to classify were included.
