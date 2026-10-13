@@ -1,5 +1,5 @@
 # TakeMeter — Fine-Tuned Running Discourse Classifier
----
+
 TakeMeter is a fine-tuned text classifier that evaluates discourse quality in the online running community. I defined the labels, collected and annotated the data, fine-tuned a model to honestly assess where the classifier works and where it falls apart. 
 
 ## Data Collection
